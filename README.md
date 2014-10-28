@@ -1,2 +1,2 @@
-databricks-spark-knowledge-base-zh-cn
+Databricks Spark Knowledge Base
 =====================================
