@@ -34,3 +34,5 @@ Spark 调用分区算法得到一个 key 来确定数据在哪一对机器上传
 
 - `combineByKey` 组合数据，但是组合之后的数据类型与输入时值的类型不一样。
 - `foldByKey` 合并每一个 key 的所有值，在级联函数和“零值”中使用。
+
+[阅读原文](http://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html)
