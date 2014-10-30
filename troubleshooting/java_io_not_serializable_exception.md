@@ -29,3 +29,5 @@ rdd.forEachPartition(iter -> {
   // ...Now process iter
 });
 ```
+
+[阅读原文](http://databricks.gitbooks.io/databricks-spark-knowledge-base/content/troubleshooting/javaionotserializableexception.html)
