@@ -1,6 +1,6 @@
 # 勿在大型 RDD 上直接调用 collect
 
-如果你的驱动机器的内存空间不能容量一个大型 RDD 的所有数据，不要做以下操作：
+如果你的驱动机器内存容量不能容纳一个大型 RDD 里面的所有数据，不要做以下操作：
 
 ```scala
 val values = myVeryLargeRDD.collect()
