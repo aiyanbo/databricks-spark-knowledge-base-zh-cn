@@ -1,6 +1,6 @@
 # 缺失依赖
 
-在默认状态下，Maven 在 build 的时候不会包含所依赖的 jar 包。让运行一个 Spark 任务，如果 Spark worker 机器上没有包含依赖的 jar 包会发生类无法找到的错误(`ClassNotFoundException`)。
+在默认状态下，Maven 在 build 的时候不会包含所依赖的 jar 包。当运行一个 Spark 任务，如果 Spark worker 机器上没有包含依赖的 jar 包会发生类无法找到的错误(`ClassNotFoundException`)。
 
 有一个简单的方式，在 Maven 打包的时候创建 ~shaded~ 或 ~uber~ 任务可以让那些依赖的 jar 包很好地打包进去。
 
