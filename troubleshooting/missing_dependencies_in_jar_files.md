@@ -6,7 +6,7 @@
 
 使用 `<scope>provided</scope>` 可以排除那些没有必要打包进去的依赖，对 Spark 的依赖必须使用 `provided` 标记，因为这些依赖已经包含在 Spark cluster中。在你的 worker 机器上已经安装的 jar 包你同样需要排除掉它们。
 
-下面是一个 Maven pom.xml 的例子，工程了包含了一些需要的一来，但是 Spark 的 libraries 不会被打包进去，因为它使用了 `provided`：
+下面是一个 Maven pom.xml 的例子，工程了包含了一些需要的依赖，但是 Spark 的 libraries 不会被打包进去，因为它使用了 `provided`：
 
 ```xml
 <project>
