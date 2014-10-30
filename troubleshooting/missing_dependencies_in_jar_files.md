@@ -2,7 +2,7 @@
 
 在默认状态下，Maven 在 build 的时候不会包含所依赖的 jar 包。当运行一个 Spark 任务，如果 Spark worker 机器上没有包含所依赖的 jar 包会发生类无法找到的错误(`ClassNotFoundException`)。
 
-有一个简单的方式，在 Maven 打包的时候创建 ~shaded~ 或 ~uber~ 任务可以让那些依赖的 jar 包很好地打包进去。
+有一个简单的方式，在 Maven 打包的时候创建 _shaded_ 或 _uber_ 任务可以让那些依赖的 jar 包很好地打包进去。
 
 使用 `<scope>provided</scope>` 可以排除那些没有必要打包进去的依赖，对 Spark 的依赖必须使用 `provided` 标记，因为这些依赖已经包含在 Spark cluster中。在你的 worker 机器上已经安装的 jar 包你同样需要排除掉它们。
 
