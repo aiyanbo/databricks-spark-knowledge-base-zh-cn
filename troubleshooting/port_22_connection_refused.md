@@ -8,4 +8,4 @@ starting org.apache.spark.deploy.master.Master, logging to ...
 localhost: ssh: connect to host localhost port 22: Connection refused
 ```
 
-你需要在你的电脑上打开 `远程登录` 功能。进入 `系统偏好设置` ---> `共享` 选择打开 `远程登录`。
+你需要在你的电脑上打开 “远程登录” 功能。进入 `系统偏好设置` ---> `共享` 勾选打开 `远程登录`。
