@@ -30,7 +30,7 @@ Spark 调用分区算法得到一个 key 来确定数据在哪一对机器上传
 
 你可以想象一个非常大的数据集，在使用 `reduceByKey` 和 `groupByKey` 时他们的差别会被放大更多倍。
 
-这里有更多的函数比 `groupByKey` 更好：
+这里有更多比 `groupByKey` 优先使用的函数：
 
 - `combineByKey` 组合数据，但是组合之后的数据类型与输入时值的类型不一样。
 - `foldByKey` 合并每一个 key 的所有值，在级联函数和“零值”中使用。
