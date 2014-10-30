@@ -15,7 +15,7 @@ JavaRDD<String> rdd = sc.textFile("/tmp/myfile");
 rdd.map(s -> notSerializable.doSomething(s)).collect();
 ```
 
-这会发生错误。这里有一些建议修正这个错误：
+这会发生错误。这里有一些建议修复这个错误：
 
 - 让 class 实现序列化
 - 在 map 方法里面使用 lambda 函数申明实例
