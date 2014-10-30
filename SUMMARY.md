@@ -7,4 +7,5 @@
 * [常规故障处理](troubleshooting/README.md)
     * [Job aborted due to stage failure: Task not serializable](troubleshooting/java_io_not_serializable_exception.md)
     * [缺失依赖](troubleshooting/missing_dependencies_in_jar_files.md)
+    * [执行 start-all.sh 错误: Connection refused](troubleshooting/port_22_connection_refused.md)
 
