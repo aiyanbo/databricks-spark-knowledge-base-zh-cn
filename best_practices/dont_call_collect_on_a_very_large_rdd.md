@@ -17,3 +17,5 @@ Collect 操作会试图将 RDD 里面的每一条数据复制到驱动机器上�
 - `collectAsMap`
 
 如果你确实需要将 RDD 里面的大量数据保存在内存中，你可以将 RDD 写成一个文件或者把 RDD 导出到一个容量足够大的数据库中。
+
+[阅读原文](http://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/dont_call_collect_on_a_very_large_rdd.html)
