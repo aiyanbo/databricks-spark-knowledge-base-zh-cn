@@ -88,3 +88,5 @@
     </build>
 </project>
 ```
+
+[阅读原文](http://databricks.gitbooks.io/databricks-spark-knowledge-base/content/troubleshooting/missing_dependencies_in_jar_files.html)

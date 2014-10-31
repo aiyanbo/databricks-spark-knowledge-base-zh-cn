@@ -67,3 +67,5 @@ Spark 组件之间的网络连接问题会导致各式各样的警告/错误：
 - 当 `Master` 或 `Worker` 进程启动时使用 `--port` 或 `-p` 选项。
 - `SPARK_MASTER_PORT` 或 `SPARK_WORKER_PORT` 环境变量(分别应用到 `Master` 和 `Worker` 上)。
 - 从操作系统(OS)选择一个临时端口。
+
+[阅读原文](http://databricks.gitbooks.io/databricks-spark-knowledge-base/content/troubleshooting/connectivity_issues.html)

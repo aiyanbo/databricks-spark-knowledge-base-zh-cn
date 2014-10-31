@@ -11,3 +11,5 @@ Spark 是一个并行数据处理框架，这意味着在执行任务的时候�
 ## 修改本地性配置
 
 你可以调整 Spark 在每个数据本地性(data local --> process local --> node local --> rack local --> Any)上等待的时长。更多详细的参数信息请查看[程序配置文档的 Scheduling 章节](http://spark.apache.org/docs/latest/configuration.html#scheduling)里类似于 `spark.locality.*` 的配置。
+
+[阅读原文](http://databricks.gitbooks.io/databricks-spark-knowledge-base/content/performance_optimization/data_locality.html)
