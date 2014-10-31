@@ -56,3 +56,5 @@ Out[2]: 30
 ```
 
 注意：上面的例子中，是故意把分区的数量初始化成 30 的。
+
+[阅读原文](http://databricks.gitbooks.io/databricks-spark-knowledge-base/content/performance_optimization/how_many_partitions_does_an_rdd_have.html)
