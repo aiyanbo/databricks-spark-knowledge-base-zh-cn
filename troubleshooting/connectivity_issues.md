@@ -25,3 +25,14 @@ Spark 组件之间的网络连接问题会导致各式各样的警告/错误：
     [...]
     ```
 
+    在这个事例中，master 报告应用已经被成功地注册了。但是注册成功的通知 driver 接收失败了， 这时 driver 会自动尝试几次重新连接直到失败的次数太多而放弃重试。 Master web UI 的结果会报告几个失败的应用即使只有一个 SparkContext 被创建。
+
+## 建议
+
+如果你遇到上述的任何错误：
+
+- 在 Spark master web UI/日志 里面检查 workers 和 drivers 配置的连接 Spark master 的地址是否是正确的。
+- 设置 driver，master，worker 的 `SPARK_LOCAL_IP` 为集群的可寻地址主机名。
+
+## 配置 hostname/port
+
