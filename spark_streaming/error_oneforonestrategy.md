@@ -28,7 +28,7 @@ dStream.foreachRDD(rdd -> {
 按照下面的方式任意修改一个，上面的代码能正常运行：
 
 - 在配置文件里面删除 `jssc.checkpoint` 这一行关闭 checkpointing。
-- 让对象能被序列化
+- 让对象能被序列化。
 - 在 forEachRDD 函数里面声明 NotSerializable，像下面的例子那样：
 
 ```scala
