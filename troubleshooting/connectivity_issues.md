@@ -36,3 +36,34 @@ Spark 组件之间的网络连接问题会导致各式各样的警告/错误：
 
 ## 配置 hostname/port
 
+这节将描述我们如何绑定 Spark 组件的网络接口和端口。
+
+在每节里，配置会按照优先级降序的方式排列。如果上一个配置没有提供，最终会使用默认的配置。
+
+### SparkContext actor system:
+
+**Hostname:**
+
+- `spark.driver.host` 属性
+- 如果 `SPARK_LOCAL_IP` 环境变量的设置是主机名(hostname)，就会使用设置时的主机名。如果 `SPARK_LOCAL_IP` 设置的是一个 IP 地址，这个 IP 地址会作为主机名。
+- 使用默认的 IP 地址，这个 IP 地址是Java 接口 `InetAddress.getLocalHost` 方法的返回值。
+
+**Port:**
+
+- `spark.driver.port` 属性。
+- 从操作系统(OS)选择一个临时端口。
+
+### Spark Standalone Master / Worker actor systems:
+
+**Hostname:**
+
+- 当 `Master` 或 `Worker` 进程启动时使用 `--host` 或 `-h` 选项(过期选项 `--ip` 或 `-i`)。
+- `SPARK_MASTER_HOST` 环境变量(仅应用在 `Master` 上)。
+- 如果 `SPARK_LOCAL_IP` 环境变量的设置是主机名(hostname)，就会使用设置时的主机名。如果 `SPARK_LOCAL_IP` 设置的是一个 IP 地址，这个 IP 地址会作为主机名。
+- 使用默认的 IP 地址，这个 IP 地址是Java 接口 `InetAddress.getLocalHost` 方法的返回值。
+
+**Port:**
+
+- 当 `Master` 或 `Worker` 进程启动时使用 `--port` 或 `-p` 选项。
+- `SPARK_MASTER_PORT` 或 `SPARK_WORKER_PORT` 环境变量(分别应用到 `Master` 和 `Worker` 上)。
+- 从操作系统(OS)选择一个临时端口。
