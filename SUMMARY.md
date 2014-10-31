@@ -12,3 +12,5 @@
 * [性能 & 优化](performance_optimization/README.md)
     * [RDD 分区](performance_optimization/how_many_partitions_does_an_rdd_have.md)
     * [数据本地性](performance_optimization/data_locality.md)
+* [Spark Streaming](spark_streaming/README.md)
+    * [ERROR OneForOneStrategy](spark_streaming/error_oneforonestrategy.md)
