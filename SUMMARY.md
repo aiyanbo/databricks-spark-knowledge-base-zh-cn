@@ -11,3 +11,4 @@
     * [Spark 组件之间的网络连接问题](troubleshooting/connectivity_issues.md)
 * [性能 & 优化](performance_optimization/README.md)
     * [RDD 分区](performance_optimization/how_many_partitions_does_an_rdd_have.md)
+    * [数据本地性](performance_optimization/data_locality.md)
