@@ -30,6 +30,29 @@ scala> someRDD.map(x => x).collect
 res3: Array[Int] = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)
 ```
 
-注意看，下面的截图有 4 个分区被缓存了。
+注意：下面的截图有 4 个分区被缓存。
 
 ![](../images/cached-partitions.png)
+
+## 查看 RDD 分区代码
+
+在 Scala API，RDD 持有一个分区数组的引用， 你可以使用它找到有多少个分区：
+
+```scala
+scala> val someRDD = sc.parallelize(1 to 100, 30)
+someRDD: org.apache.spark.rdd.RDD[Int] = ParallelCollectionRDD[0] at parallelize at <console>:12
+
+scala> someRDD.partitions.size
+res0: Int = 30
+```
+
+在 Python API, 有一个方法可以明确地列出有多少个分区：
+
+```python
+In [1]: someRDD = sc.parallelize(range(101),30)
+
+In [2]: someRDD.getNumPartitions()
+Out[2]: 30
+```
+
+注意：上面的例子中，是故意把分区的数量初始化成 30 的。
