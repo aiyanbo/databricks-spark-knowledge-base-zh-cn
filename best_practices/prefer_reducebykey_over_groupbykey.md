@@ -16,9 +16,9 @@ val wordCountsWithGroup = wordPairsRDD
   .collect()
 ```
 
-虽然两个函数都能得出正确的结果，`reduceByKey` 更适合使用在大数据集上。这是因为Spark知道它可以 在每个分区移动数据之前会将输出数据与一个共用的key结合。
+虽然两个函数都能得出正确的结果，`reduceByKey` 更适合使用在大数据集上。这是因为 Spark 知道它可以 在每个分区移动数据之前会将输出数据与一个共用的 key 结合。
 
-借助下图可以理解在 `reduceByKey` 里发生了什么。 注意在数据对被搬移前同一机器上同样的 key 是怎样被组合的(`reduceByKey` 中的 lamdba 函数)。然后 lamdba 函数在每个区上被再次调用来将所有值reduce成一个最终结果。
+借助下图可以理解在 `reduceByKey` 里发生了什么。 注意在数据对被搬移前同一机器上同样的 key 是怎样被组合的(`reduceByKey` 中的 lamdba 函数)。然后 lamdba 函数在每个区上被再次调用来将所有值 reduce 成一个最终结果。
 
 ![](../images/reduce_by.png)
 
