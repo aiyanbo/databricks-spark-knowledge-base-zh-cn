@@ -25,27 +25,27 @@ Spark 组件之间的网络连接问题会导致各式各样的警告/错误：
     [...]
     ```
 
-    在这个事例中，master 报告应用已经被成功地注册了。但是注册成功的通知 driver 接收失败了， 这时 driver 会自动尝试几次重新连接直到失败的次数太多而放弃重试。 Master web UI 的结果会报告几个失败的应用即使只有一个 SparkContext 被创建。
+    在这样的情况下，master 报告应用已经被成功地注册了。但是注册成功的通知 driver 接收失败了， 这时 driver 会自动尝试几次重新连接直到失败的次数太多而放弃重试。其结果是 Master web UI 会报告多个失败的应用，即使只有一个 SparkContext 被创建。
 
 ## 建议
 
 如果你遇到上述的任何错误：
 
-- 在 Spark master web UI/日志 里面检查 workers 和 drivers 配置的连接 Spark master 的地址是否是正确的。
+- 检查 workers 和 drivers 配置的 Spark master 的地址就是在 Spark master web UI/日志中列出的那个地址。
 - 设置 driver，master，worker 的 `SPARK_LOCAL_IP` 为集群的可寻地址主机名。
 
 ## 配置 hostname/port
 
 这节将描述我们如何绑定 Spark 组件的网络接口和端口。
 
-在每节里，配置会按照优先级降序的方式排列。如果上一个配置没有提供，最终会使用默认的配置。
+在每节里，配置会按照优先级降序的方式排列。如果前面所有配置没有提供则使用最后一条作为默认配置。
 
 ### SparkContext actor system:
 
 **Hostname:**
 
 - `spark.driver.host` 属性
-- 如果 `SPARK_LOCAL_IP` 环境变量的设置是主机名(hostname)，就会使用设置时的主机名。如果 `SPARK_LOCAL_IP` 设置的是一个 IP 地址，这个 IP 地址会作为主机名。
+- 如果 `SPARK_LOCAL_IP` 环境变量的设置是主机名(hostname)，就会使用设置时的主机名。如果 `SPARK_LOCAL_IP` 设置的是一个 IP 地址，这个 IP 地址会被解析为主机名。
 - 使用默认的 IP 地址，这个 IP 地址是Java 接口 `InetAddress.getLocalHost` 方法的返回值。
 
 **Port:**
@@ -57,9 +57,9 @@ Spark 组件之间的网络连接问题会导致各式各样的警告/错误：
 
 **Hostname:**
 
-- 当 `Master` 或 `Worker` 进程启动时使用 `--host` 或 `-h` 选项(过期选项 `--ip` 或 `-i`)。
+- 当 `Master` 或 `Worker` 进程启动时使用 `--host` 或 `-h` 选项(或是过期的选项 `--ip` 或 `-i`)。
 - `SPARK_MASTER_HOST` 环境变量(仅应用在 `Master` 上)。
-- 如果 `SPARK_LOCAL_IP` 环境变量的设置是主机名(hostname)，就会使用设置时的主机名。如果 `SPARK_LOCAL_IP` 设置的是一个 IP 地址，这个 IP 地址会作为主机名。
+- 如果 `SPARK_LOCAL_IP` 环境变量的设置是主机名(hostname)，就会使用设置时的主机名。如果 `SPARK_LOCAL_IP` 设置的是一个 IP 地址，这个 IP 地址会被解析为主机名。
 - 使用默认的 IP 地址，这个 IP 地址是Java 接口 `InetAddress.getLocalHost` 方法的返回值。
 
 **Port:**
