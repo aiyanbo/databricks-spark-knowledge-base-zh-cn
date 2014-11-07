@@ -1,7 +1,6 @@
 Databricks Spark Knowledge Base 简体中文
 =====================================
 
-* [Introduction](README.md)
 * [最佳实践](best_practices/README.md)
     * [避免使用 GroupByKey](best_practices/prefer_reducebykey_over_groupbykey.md)
     * [不要将大型 RDD 的所有元素拷贝到请求驱动者](best_practices/dont_call_collect_on_a_very_large_rdd.md)
