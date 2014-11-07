@@ -7,7 +7,7 @@
 * [常规故障处理](troubleshooting/README.md)
     * [Job aborted due to stage failure: Task not serializable](troubleshooting/java_io_not_serializable_exception.md)
     * [缺失依赖](troubleshooting/missing_dependencies_in_jar_files.md)
-    * [执行 start-all.sh 错误: Connection refused](troubleshooting/port_22_connection_refused.md)
+    * [执行 start-all.sh 错误 - Connection refused](troubleshooting/port_22_connection_refused.md)
     * [Spark 组件之间的网络连接问题](troubleshooting/connectivity_issues.md)
 * [性能 & 优化](performance_optimization/README.md)
     * [一个 RDD 有多少个分区](performance_optimization/how_many_partitions_does_an_rdd_have.md)
