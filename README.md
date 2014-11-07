@@ -21,4 +21,4 @@ Databricks Spark Knowledge Base 简体中文
 
 ## License
 
-This content is covered by the license specified [here](LICENSE).
+此内容使用的授权许可请查看[这里](LICENSE)。
