@@ -19,3 +19,7 @@ Databricks Spark Knowledge Base 简体中文
 ## Copyright
 
 本文翻译自: http://databricks.gitbooks.io/databricks-spark-knowledge-base/ 著作权归原作者所有。
+
+## License
+
+This content is covered by the license specified [here](LICENSE).
