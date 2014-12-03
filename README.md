@@ -1,4 +1,4 @@
-Databricks Spark Knowledge Base 简体中文
+Databricks Spark 知识库
 =====================================
 
 * [最佳实践](best_practices/README.md)
